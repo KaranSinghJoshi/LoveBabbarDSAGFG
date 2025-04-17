@@ -1,0 +1,13 @@
+public static String reverseString(String str) {
+        // code here
+        String outL="";
+        String outR="";
+        for(int i=0,j=str.length()-1;i<j;i++,j--){
+            outL=str.charAt(i)+outL;
+            outR=outR+str.charAt(j);
+        }
+        if(str.length()%2==1){
+            return outR+str.charAt(str.length()/2)+outL;
+        }
+        return outR+outL;
+    }
