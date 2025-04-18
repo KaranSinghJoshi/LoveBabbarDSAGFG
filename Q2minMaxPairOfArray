@@ -1,0 +1,23 @@
+https://www.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1
+
+public Pair<Integer, Integer> getMinMax(int[] arr) {
+        // Code Here
+        
+        int mini = Integer.MAX_VALUE;
+        int maxi = Integer.MIN_VALUE;
+        
+        for (int i:arr){
+            if(i<mini){
+                mini=i;
+            }
+            if(i>maxi){
+                maxi=i;
+            }
+        }
+        
+        
+        
+        Pair <Integer, Integer> Out = new Pair<>(mini, maxi);
+        
+        return Out;
+    }
