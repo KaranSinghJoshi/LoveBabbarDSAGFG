@@ -1,0 +1,22 @@
+https://www.geeksforgeeks.org/problems/union-of-two-arrays3538/1
+
+class Solution {
+    public static int findUnion(int a[], int b[]) {
+        // code here
+        HashMap <Integer,Integer> map = new HashMap<>();
+        
+        //map me add karungaa fir size check kar loonga
+        
+        for(int i : a){
+            map.put(i,1);
+        }
+        for(int i : b){
+            map.put(i,1);
+        }
+        
+        return map.size();
+        
+        
+        
+    }
+}
