@@ -1,0 +1,24 @@
+https://leetcode.com/problems/majority-element/
+
+class Solution {
+    public int majorityElement(int[] nums) {
+
+        int key= nums[0];
+        int count=0;
+        for(int i: nums){
+            if (count==0){
+                key=i;
+            }
+            if (i==key){
+                count++;
+            }
+            else count--;
+
+            
+
+        }
+
+        return key;
+        
+    }
+}
