@@ -1,0 +1,38 @@
+https://leetcode.com/problems/set-matrix-zeroes/
+
+class Solution {
+    public void setZeroes(int[][] matrix) {
+
+        int m = matrix.length;
+        int n = matrix[0].length;
+        List <Integer> li = new ArrayList<>();
+        List <Integer> lj = new ArrayList<>();
+
+        for (int i=0; i< m; i++){
+            for (int j=0; j<n; j++){
+
+                if (matrix[i][j]==0){
+                    if (!li.contains(i)){
+                        li.add(i);
+                    }
+                    if (!lj.contains(j)){
+                        lj.add(j);
+                    }
+                }
+
+            }
+
+        }
+
+        for (int i=0; i< m; i++){
+            for (int j=0; j<n; j++){
+
+                if (li.contains(i) || lj.contains(j)){
+                    matrix[i][j]=0;
+                }
+
+            }
+        }
+    
+    }
+}
